@@ -4,7 +4,7 @@ __author__ = "730279779"
 
 
 # Begin your solution here...
-prompt: int= int(input("Please enter a number: "))
+prompt: int = int(input("Please enter a number: "))
 
 if (prompt % 2) == 0 and (prompt % 7) == 0:
     print("TAR HEELS")
