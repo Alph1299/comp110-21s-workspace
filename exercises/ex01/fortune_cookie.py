@@ -13,8 +13,8 @@ from random import randint
 
 
 # Begin your solution here...
-print("Your fotune cookie says...")
-fortune: int = int(randint(1,4))
+print("Your fortune cookie says...")
+fortune: int = int(randint(1, 4))
 
 if fortune == 1:
     print("You will encounter great fortune.")
