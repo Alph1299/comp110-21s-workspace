@@ -16,19 +16,18 @@ from datetime import datetime
 # Official Documentation: https://docs.python.org/3/library/datetime.html#datetime.timedelta
 from datetime import timedelta
 
-
 # Begin your solution here...
 population: int = int(input("Population: "))
 p_doses: int = int(input("Doses Administered: "))
 doses_day: int = int(input("Doses Per Day: "))
 target_vaccinated: int = int(input("Target Percentage Vaccined (0ut of 100): "))
 
-end_number = ((((population*2)-p_doses)*(target_vaccinated/100))/doses_day)
+end_number = ((((population * 2) * (target_vaccinated / 100)) - p_doses) / doses_day)
 today = datetime.today()
-timespan: timedelta = timedelta(end_number)
+timespan: timedelta = timedelta(round(end_number))
 end_date: datetime = today + timespan
-dateoutput = str(end_date.strftime("%B %d, %Y"))
-day_output = str(end_number)
-count_percent = str(target_vaccinated)
+date = str((end_date.strftime("%B %d, %Y")))
+d_output = str(round(end_number))
+c_percent = str(target_vaccinated)
 
-print("We will reach " + count_percent + "% " + "in " + day_output + " days, which falls on " + dateoutput + ".")
+print("We will reach " + c_percent + "% vaccination in " + d_output + " days, which falls on " + date + ".")
